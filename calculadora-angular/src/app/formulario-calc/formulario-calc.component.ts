@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-formulario-calc',
@@ -6,6 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulario-calc.component.css']
 })
 export class FormularioCalcComponent implements OnInit {
+
+  operandoA: number;
+  operandoB: number;
+
+  @Output() resultadoSuma = new EventEmitter<number>();
+
+  sumar():void{
+     let resultado = this.operandoA + this.operandoB;
+     this.resultadoSuma.emit(resultado)
+
+  }
 
   constructor() { }
 

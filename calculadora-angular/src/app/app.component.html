@@ -1,5 +1,6 @@
 <div class="container">
   <h1>{{titulo}}</h1>
-  <app-formulario-calc> </app-formulario-calc>
-  <app-resultado></app-resultado>
+  <app-formulario-calc (resultadoSuma)="procesarResultado($event)"> </app-formulario-calc>
+  
+  <app-resultado [resultadoHijo]="resultadoPadre" ></app-resultado>
 </div>

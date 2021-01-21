@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ResultadoComponent implements OnInit {
 
-  @Input() resultin: number;
+  @Input() resultadoHijo: number;
 
   constructor() { }
 
